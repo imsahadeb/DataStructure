@@ -6,9 +6,9 @@ public class TakeInputLL {
 
 
     
-    public static void print(Node<Integer> head){
+    public static void print(LinkedListNode<Integer> head){
 
-        Node<Integer> temp = head;
+        LinkedListNode<Integer> temp = head;
         while(temp!= null){
           System.out.print(temp.data+" ");
           temp=temp.next;
@@ -20,17 +20,17 @@ public class TakeInputLL {
     }
 
 
-    public static Node<Integer> takeInput(){
+    public static LinkedListNode<Integer> takeInput(){
         Scanner sc = new Scanner(System.in);
         int data = sc.nextInt();
-        Node<Integer> head =null;
+        LinkedListNode<Integer> head =null;
         while(data!=-1){
-            Node<Integer> currentNode = new Node<Integer>(data);
+            LinkedListNode<Integer> currentNode = new LinkedListNode<Integer>(data);
             if(head==null){
                 head=currentNode;
             }
             else{
-                Node<Integer> tail = head;
+                LinkedListNode<Integer> tail = head;
                 while(tail.next!=null){
                     tail=tail.next;
                 }
@@ -42,7 +42,7 @@ public class TakeInputLL {
         return head;
     }
     public static void main(String[] args) {
-        Node<Integer> head= takeInput();
+        LinkedListNode<Integer> head= takeInput();
         print(head);
         
     }
